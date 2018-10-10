@@ -2,7 +2,7 @@ const Flow = require('flow-platform-sdk');
 
 /*
  *
- * The class converts a string to lowercase
+ * The component converts a string to lower case
  *  
  */
 
