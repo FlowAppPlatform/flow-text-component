@@ -526,7 +526,7 @@
   },
   "flow-text-component-replace": {
     "componentId": "flow-text-component-replace",
-    "title": "Replace bits of a string that match a regular expression with another",
+    "title": "Replace parts of a string that match a regular expression with another",
     "imgSrc": "assets/icons/text.svg",
     "type": "flow-graph-component",
     "file": "./replace.js",
