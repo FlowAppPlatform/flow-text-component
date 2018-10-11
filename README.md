@@ -20,6 +20,7 @@ const component = new Component.Contains();
 *Provide required parameters*
 
 ```javascript
+  // these are required for the Contains component
 component.getProperty('Text').data = 'Going forth into the deep.';
 component.getProperty('TextContained').data = 'for';
 ```
