@@ -6,7 +6,7 @@ const Flow = require('flow-platform-sdk');
  *  
  */
 
-class toLowerCase extends Flow.Component {
+class ToLowerCase extends Flow.Component {
   constructor() {
     
     super();
@@ -45,4 +45,4 @@ class toLowerCase extends Flow.Component {
   }
 }
 
-module.exports = toLowerCase;
+module.exports = ToLowerCase;

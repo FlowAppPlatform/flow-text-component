@@ -2,24 +2,28 @@ const Flow = require('flow-platform-sdk');
 
 /*
  *
- * The component converts a string to upper case
+ * The component splits a string into bits seperated by another, returns an array of the bits
  *  
  */
 
-class ToUpperCase extends Flow.Component {
+class Split extends Flow.Component {
   constructor() {
     
     super();
-    this.name = 'To upper case';
+    this.name = 'Split';
 
-    const text = new Flow.Property('Text', 'text');
+    let text = new Flow.Property('Text', 'text');
+    text.required = true;
+    this.addProperty(text);
+
+    text = new Flow.Property('Seperator', 'text');
     text.required = true;
     this.addProperty(text);
 
     const success = new Flow.Port('Success');
     const error = new Flow.Port('Error');
 
-    let data = new Flow.Property('Data', 'text');
+    let data = new Flow.Property('Data', 'list');
     success.addProperty(data);
 
     data = new Flow.Property('Data', 'text');
@@ -32,11 +36,12 @@ class ToUpperCase extends Flow.Component {
     this.attachTask(function() {
       let port = this.getPort('Success');
       try {
-        let text = this.getProperty('Text').data.toLocaleUpperCase();
-        port.getProperty('Data').data = text;
+        let seperator = this.getProperty('Seperator').data;
+        let text = this.getProperty('Text').data;
+        port.getProperty('Data').data = text.split(seperator);
       } catch(err) {
         port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot convert text to upper case';
+        port.getProperty('Data').data = 'Cannot split text';
       }
       port.emit();
       this.taskComplete();
@@ -45,4 +50,4 @@ class ToUpperCase extends Flow.Component {
   }
 }
 
-module.exports = ToUpperCase;
+module.exports = Split;
