@@ -1,5 +1,5 @@
-## Flow Text Contains component
-The component checks if a string contains another. Emits true if the string contains another, otherwise it emits false.
+## Flow Text EndsWith component
+The component checks a string ends with another. Emits true if the string ends with another, otherwise it emits false.
 
 *Use the component as below*
 
@@ -7,8 +7,8 @@ The component checks if a string contains another. Emits true if the string cont
 // require the text component
 const Component = require('flow-text-component');
 
-// create instance of the Contains component
-const component = new Component.Contains();
+// create instance of the EndsWith component
+const component = new Component.EndsWith();
 ```
 
 *Provide required parameters*
@@ -16,15 +16,16 @@ const component = new Component.Contains();
 ```javascript
 // the text to check
 component.getProperty('Text').data = 'Going forth into the deep.';
-// the text contained
-component.getProperty('TextContained').data = 'for';
+// the text ended with
+component.getProperty('TextEndedWith').data = 'for';
 ```
 
 *Listen in for port emit events*
 ```javascript
 component.getPort('Success').onEmit(function(){
   // operation occured succesfully
-  // the result should be true or false depending on whether the text contains the other
+  // the result should be true or false depending on whether the text ends with the other
+  // this case should return false
   let result = component.getPort('Success').getProperty('Data').data;
 });
 
@@ -39,4 +40,4 @@ component.execute();
 
 #### Conclusion
 
-This is a sample use of the Flow Text Contains component. Check the [docs](./../docs/) on how to use other components
+This is a sample use of the Flow Text EndsWith component. Check the [docs](./../docs/) on how to use other components

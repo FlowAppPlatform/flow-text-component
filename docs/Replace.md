@@ -1,5 +1,5 @@
-## Flow Text Contains component
-The component checks if a string contains another. Emits true if the string contains another, otherwise it emits false.
+## Flow Text Replace component
+The component replaces parts of a string that match a regular expression with another. Emits the new string with replacements.
 
 *Use the component as below*
 
@@ -7,24 +7,26 @@ The component checks if a string contains another. Emits true if the string cont
 // require the text component
 const Component = require('flow-text-component');
 
-// create instance of the Contains component
-const component = new Component.Contains();
+// create instance of the Replace component
+const component = new Component.Replace();
 ```
 
 *Provide required parameters*
 
 ```javascript
-// the text to check
+// the text to replace
 component.getProperty('Text').data = 'Going forth into the deep.';
-// the text contained
-component.getProperty('TextContained').data = 'for';
+// the text to replace with
+component.getProperty('Replacement').data = 'to';
+// the regular expression to match
+component.getProperty('Regex').data = /into/gi;
 ```
 
 *Listen in for port emit events*
 ```javascript
 component.getPort('Success').onEmit(function(){
   // operation occured succesfully
-  // the result should be true or false depending on whether the text contains the other
+  // the result is the new string with replacements
   let result = component.getPort('Success').getProperty('Data').data;
 });
 
@@ -39,4 +41,4 @@ component.execute();
 
 #### Conclusion
 
-This is a sample use of the Flow Text Contains component. Check the [docs](./../docs/) on how to use other components
+This is a sample use of the Flow Text Replace component. Check the [docs](./../docs/) on how to use other components

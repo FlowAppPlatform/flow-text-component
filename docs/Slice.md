@@ -1,5 +1,5 @@
-## Flow Text Contains component
-The component checks if a string contains another. Emits true if the string contains another, otherwise it emits false.
+## Flow Text Slice component
+The component retrieves a portion of a string between two indices. Emits the portion of the string between the indices.
 
 *Use the component as below*
 
@@ -7,24 +7,26 @@ The component checks if a string contains another. Emits true if the string cont
 // require the text component
 const Component = require('flow-text-component');
 
-// create instance of the Contains component
-const component = new Component.Contains();
+// create instance of the Slice component
+const component = new Component.Slice();
 ```
 
 *Provide required parameters*
 
 ```javascript
-// the text to check
+// the text to retrieve a portion from
 component.getProperty('Text').data = 'Going forth into the deep.';
-// the text contained
-component.getProperty('TextContained').data = 'for';
+// the index to start at
+component.getProperty('StartIndex').data = 3;
+// the index to end at
+component.getProperty('EndIndex').data = 13;
 ```
 
 *Listen in for port emit events*
 ```javascript
 component.getPort('Success').onEmit(function(){
   // operation occured succesfully
-  // the result should be true or false depending on whether the text contains the other
+  // the result is the portion of the string between the indices
   let result = component.getPort('Success').getProperty('Data').data;
 });
 
@@ -39,4 +41,4 @@ component.execute();
 
 #### Conclusion
 
-This is a sample use of the Flow Text Contains component. Check the [docs](./../docs/) on how to use other components
+This is a sample use of the Flow Text Slice component. Check the [docs](./../docs/) on how to use other components

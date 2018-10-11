@@ -1,5 +1,5 @@
-## Flow Text Contains component
-The component checks if a string contains another. Emits true if the string contains another, otherwise it emits false.
+## Flow Text Matches component
+The component finds matches to a regular expression in a string. Emits an array of the matches found.
 
 *Use the component as below*
 
@@ -7,24 +7,24 @@ The component checks if a string contains another. Emits true if the string cont
 // require the text component
 const Component = require('flow-text-component');
 
-// create instance of the Contains component
-const component = new Component.Contains();
+// create instance of the Matches component
+const component = new Component.Matches();
 ```
 
 *Provide required parameters*
 
 ```javascript
-// the text to check
+// the text to search
 component.getProperty('Text').data = 'Going forth into the deep.';
-// the text contained
-component.getProperty('TextContained').data = 'for';
+// the regular expression to match
+component.getProperty('TextSearchedFor').data = /[A-Z]/g;
 ```
 
 *Listen in for port emit events*
 ```javascript
 component.getPort('Success').onEmit(function(){
   // operation occured succesfully
-  // the result should be true or false depending on whether the text contains the other
+  // the result is an array of the matches
   let result = component.getPort('Success').getProperty('Data').data;
 });
 
@@ -39,4 +39,4 @@ component.execute();
 
 #### Conclusion
 
-This is a sample use of the Flow Text Contains component. Check the [docs](./../docs/) on how to use other components
+This is a sample use of the Flow Text Matches component. Check the [docs](./../docs/) on how to use other components
