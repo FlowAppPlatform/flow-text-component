@@ -1,8 +1,10 @@
-import Component from './index';
+const assert = require('assert');
+const Component = require('./index');
 const component = new Component.StartsWith();
 
-describe(`Sample Tests`, function() {
-  if('Should pass', function(done) {
-    done();
+describe(`Sample Tests
+`, function() {
+  it('Should pass', function() {
+    assert.equal(1,1);
   });
 });
