@@ -2,7 +2,7 @@ const Flow = require('flow-platform-sdk');
 
 /*
  *
- * The component checks whether a string contains another, returns boolean
+ * The component checks whether a string contains another and emits the result
  *  
  */
 
@@ -16,35 +16,24 @@ class Contains extends Flow.Component {
     text.required = true;
     this.addProperty(text);
 
-    text = new Flow.Property('TextContained', 'text');
+    text = new Flow.Property('Contains', 'text');
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
-
-    let data = new Flow.Property('Data', 'boolean');
-    success.addProperty(data);
-
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
+    this.addPort(new Flow.Port('Contains'));
+    this.addPort(new Flow.Port('DoesNotContain'));
 
     // we perform operation here
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let textContained = this.getProperty('TextContained').data;
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.includes(textContained);
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot check text contained in text';
-      }
+      
+      const textContained = this.getProperty('Contains').data;
+      const text = this.getProperty('Text').data;
+      
+      const port = this.getPort(text.includes(textContained) ? 'Contains' : 'DoesNotContain');
       port.emit();
+      
       this.taskComplete();
+      
     });
 
   }
