@@ -1,5 +1,5 @@
 ## Flow Text Matches component
-The component finds matches to a regular expression in a string. Emits an array of the matches found.
+The component finds matches to a regular expression in a string and emits an array of the matches found.
 
 *Use the component as below*
 
@@ -17,20 +17,14 @@ const component = new Component.Matches();
 // the text to search
 component.getProperty('Text').data = 'Going forth into the deep.';
 // the regular expression to match
-component.getProperty('TextSearchedFor').data = /[A-Z]/g;
+component.getProperty('Match').data = /[A-Z]/g;
 ```
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
+component.getPort('Done').onEmit(function(){
   // the result is an array of the matches
-  let result = component.getPort('Success').getProperty('Data').data;
-});
-
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+  let result = component.getPort('Done').getProperty('Result').data;
 });
 
 // execute the component

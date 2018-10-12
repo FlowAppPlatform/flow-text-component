@@ -17,35 +17,26 @@ class Matches extends Flow.Component {
     this.addProperty(text);
 
     // a regular expression object
-    text = new Flow.Property('TextSearchedFor', 'object');
+    text = new Flow.Property('Match', 'object');
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    const done = new Flow.Port('Done');
+    done.addProperty(new Flow.Property('Result', 'list'));
 
-    let data = new Flow.Property('Data', 'list');
-    success.addProperty(data);
+    this.addPort(done);
 
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
-
-    // we perform operation here
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let textMatchesedFor = this.getProperty('TextSearchedFor').data;
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.match(textMatchesedFor);
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'No matches found or an error occured while performing the search';
-      }
+      
+      let match = this.getProperty('Match').data;
+      let text = this.getProperty('Text').data;
+      
+      let port = this.getPort('Done');
+      port.getProperty('Result').data = text.match(match);
       port.emit();
+      
       this.taskComplete();
+
     });
 
   }

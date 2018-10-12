@@ -252,38 +252,18 @@
     },
     "ports": [
       {
-        "id": "Success",
-        "title": "Success",
-        "description": "Operation done succesfully.",
+        "id": "Done",
+        "title": "Done",
+        "description": "Matches search complete.",
         "properties": [
           {
             "categoryName": "General",
             "categoryDescription": "Basic settings about this port.",
             "properties": [
               {
-                "id": "Data",
+                "id": "Result",
                 "name": "Matches found",
                 "type": "list",
-                "data": null,
-                "options": { "required": true }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Error",
-        "title": "Error",
-        "description": "An error occured during the operation.",
-        "properties": [
-          {
-            "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
-            "properties": [
-              {
-                "id": "Data",
-                "name": "Error",
-                "type": "text",
                 "data": null,
                 "options": { "required": true }
               }
@@ -305,7 +285,7 @@
             "options": { "required": true }
           },
           {
-            "id": "TextSearchedFor",
+            "id": "Match",
             "name": "Regular expression for finding matches",
             "type": "object",
             "data": null,
