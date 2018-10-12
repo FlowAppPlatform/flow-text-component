@@ -1,5 +1,5 @@
 ## Flow Text EndsWith component
-The component checks a string ends with another. Emits true if the string ends with another, otherwise it emits false.
+The component checks a string ends with another and emits the result.
 
 *Use the component as below*
 
@@ -17,21 +17,17 @@ const component = new Component.EndsWith();
 // the text to check
 component.getProperty('Text').data = 'Going forth into the deep.';
 // the text ended with
-component.getProperty('TextEndedWith').data = 'for';
+component.getProperty('EndsWith').data = 'for';
 ```
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
-  // the result should be true or false depending on whether the text ends with the other
-  // this case should return false
-  let result = component.getPort('Success').getProperty('Data').data;
+component.getPort('EndsWith').onEmit(function() {
+  // text ends with the other
 });
 
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+component.getPort('DoesNotEndWith').onEmit(function() {
+  // text does not end with the other
 });
 
 // execute the component

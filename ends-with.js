@@ -2,7 +2,7 @@ const Flow = require('flow-platform-sdk');
 
 /*
  *
- * The component checks whether a string ends with another, returns boolean
+ * The component checks whether a string ends with another and emits the result
  *  
  */
 
@@ -16,35 +16,23 @@ class EndsWith extends Flow.Component {
     text.required = true;
     this.addProperty(text);
 
-    text = new Flow.Property('TextEndedWith', 'text');
+    text = new Flow.Property('EndsWith', 'text');
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    this.addPort(new Flow.Port('EndsWith'));
+    this.addPort(new Flow.Port('DoesNotEndWith'));
 
-    let data = new Flow.Property('Data', 'boolean');
-    success.addProperty(data);
-
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
-
-    // we perform operation here
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let textEndedWith = this.getProperty('TextEndedWith').data;
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.endsWith(textEndedWith);
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot check text ended with in text';
-      }
+
+      let textEndedWith = this.getProperty('EndsWith').data;
+      let text = this.getProperty('Text').data;
+      
+      let port = this.getPort(text.endsWith(textEndedWith) ? 'EndsWith' : 'DoesNotEndWith');
       port.emit();
+      
       this.taskComplete();
+
     });
 
   }

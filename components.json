@@ -28,14 +28,14 @@
         "properties": [
           {
             "id": "Text",
-            "name": "Text checked",
+            "name": "Text to check",
             "type": "text",
             "data": null,
             "options": { "required": true }
           },
           {
             "id": "Contains",
-            "name": "Text contained",
+            "name": "Text to check for",
             "type": "text",
             "data": null,
             "options": { "required": true }
@@ -105,7 +105,7 @@
         "properties": [
           {
             "id": "Text",
-            "name": "Text checked",
+            "name": "Text to check",
             "type": "text",
             "data": null,
             "options": { "required": true }
@@ -135,44 +135,14 @@
     },
     "ports": [
       {
-        "id": "Success",
-        "title": "Success",
-        "description": "Operation done succesfully.",
-        "properties": [
-          {
-            "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
-            "properties": [
-              {
-                "id": "Data",
-                "name": "Data",
-                "type": "boolean",
-                "data": null,
-                "options": { "required": true }
-              }
-            ]
-          }
-        ]
+        "id": "EndsWith",
+        "title": "Ends with",
+        "description": "The text ends with the other."
       },
       {
-        "id": "Error",
-        "title": "Error",
-        "description": "An error occured during the operation.",
-        "properties": [
-          {
-            "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
-            "properties": [
-              {
-                "id": "Data",
-                "name": "Error",
-                "type": "text",
-                "data": null,
-                "options": { "required": true }
-              }
-            ]
-          }
-        ]
+        "id": "DoesNotEndWith",
+        "title": "Does not end with",
+        "description": "The text does not end with the other."
       }
     ],
     "properties": [
@@ -182,14 +152,14 @@
         "properties": [
           {
             "id": "Text",
-            "name": "Text checked",
+            "name": "Text to check",
             "type": "text",
             "data": null,
             "options": { "required": true }
           },
           {
-            "id": "TextEndedWith",
-            "name": "Text ended with",
+            "id": "EndsWith",
+            "name": "Text to check for",
             "type": "text",
             "data": null,
             "options": { "required": true }
