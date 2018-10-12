@@ -1,5 +1,5 @@
 ## Flow Text ToUpperCase component
-The component converts a string to upper case. Emits the converted upper case text.
+The component converts a string to upper case and emits the converted upper case text.
 
 *Use the component as below*
 
@@ -20,15 +20,9 @@ component.getProperty('Text').data = 'Going forth into the deep.';
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
+component.getPort('Done').onEmit(function(){
   // the result is the converted upper case text
-  let result = component.getPort('Success').getProperty('Data').data;
-});
-
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+  let result = component.getPort('Done').getProperty('Result').data;
 });
 
 // execute the component
