@@ -1,5 +1,5 @@
 ## Flow Text ToLowerCase component
-The component converts a string to lower case. Emits the converted lower case text.
+The component converts a string to lower case and emits the converted lower case text.
 
 *Use the component as below*
 
@@ -20,15 +20,10 @@ component.getProperty('Text').data = 'Going forth into the deep.';
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
+component.getPort('Done').onEmit(function(){
   // operation occured succesfully
   // the result is the converted lower case text
-  let result = component.getPort('Success').getProperty('Data').data;
-});
-
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+  let result = component.getPort('Success').getProperty('Result').data;
 });
 
 // execute the component

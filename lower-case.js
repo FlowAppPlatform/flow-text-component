@@ -16,30 +16,19 @@ class ToLowerCase extends Flow.Component {
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    const done = new Flow.Port('Done');
+    done.addProperty(new Flow.Property('Result', 'text'));
 
-    let data = new Flow.Property('Data', 'text');
-    success.addProperty(data);
-
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
-
-    // we perform operation here
+    this.addPort(done);
+    
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let text = this.getProperty('Text').data.toLocaleLowerCase();
-        port.getProperty('Data').data = text;
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot convert text to lower case';
-      }
+      
+      let port = this.getPort('Done');
+      port.getProperty('Result').data = this.getProperty('Text').data.toLocaleLowerCase();
       port.emit();
+      
       this.taskComplete();
+
     });
 
   }
