@@ -1,5 +1,5 @@
 ## Flow Text Search component
-The component searches a string using a regular expression. Emits the index of the first match found.
+The component searches a string using a regular expression and emits the index of the first match found.
 
 *Use the component as below*
 
@@ -17,20 +17,14 @@ const component = new Component.Search();
 // the text to search
 component.getProperty('Text').data = 'Going forth into the deep.';
 // the regular expression to match
-component.getProperty('TextSearchedFor').data = /into/gi;
+component.getProperty('Search').data = /into/gi;
 ```
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
+component.getPort('Done').onEmit(function() {
   // the result is an array of the matches
-  let result = component.getPort('Success').getProperty('Data').data;
-});
-
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+  let result = component.getPort('Done').getProperty('Result').data;
 });
 
 // execute the component

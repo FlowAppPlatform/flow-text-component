@@ -24,33 +24,25 @@ class Slice extends Flow.Component {
     end.required = true;
     this.addProperty(end);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    const done = new Flow.Port('Done');
+    done.addProperty(new Flow.Property('Result', 'text'));
 
-    let data = new Flow.Property('Data', 'text');
-    success.addProperty(data);
-
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
+    this.addPort(done);
 
     // we perform operation here
     this.attachTask(function () {
-      let port = this.getPort('Success');
-      try {
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.slice(
-          this.getProperty('StartIndex').data,
-          this.getProperty('EndIndex').data
-        );
-      } catch (err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot slice text';
-      }
+      
+      let text = this.getProperty('Text').data;
+      
+      let port = this.getPort('Done');
+      port.getProperty('Result').data = text.slice(
+        this.getProperty('StartIndex').data,
+        this.getProperty('EndIndex').data
+      );
       port.emit();
+
       this.taskComplete();
+
     });
 
   }

@@ -21,37 +21,28 @@ class Replace extends Flow.Component {
     this.addProperty(text);
 
     // a regular expression object
-    text = new Flow.Property('Regex', 'object');
+    text = new Flow.Property('Replace', 'object');
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    const done = new Flow.Port('Done');
+    done.addProperty(new Flow.Property('Result', 'text'));
 
-    let data = new Flow.Property('Data', 'text');
-    success.addProperty(data);
+    this.addPort(done);
 
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
-
-    // we perform operation here
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.replace(
-          this.getProperty('Regex').data,
-          this.getProperty('Replacement').data
-        );
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot replace bits in the text';
-      }
+      
+      let text = this.getProperty('Text').data;
+      
+      let port = this.getPort('Done');
+      port.getProperty('Result').data = text.replace(
+        this.getProperty('Replace').data,
+        this.getProperty('Replacement').data
+      );
       port.emit();
+
       this.taskComplete();
+
     });
 
   }

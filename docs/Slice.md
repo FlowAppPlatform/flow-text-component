@@ -24,15 +24,9 @@ component.getProperty('EndIndex').data = 13;
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
+component.getPort('Done').onEmit(function() {
   // the result is the portion of the string between the indices
-  let result = component.getPort('Success').getProperty('Data').data;
-});
-
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+  let result = component.getPort('Done').getProperty('Result').data;
 });
 
 // execute the component
