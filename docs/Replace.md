@@ -24,7 +24,7 @@ component.getProperty('Replace').data = /into/gi;
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Done').onEmit(function(){
+component.getPort('Done').onEmit(function() {
   // the result is the new string with replacements
   let result = component.getPort('Done').getProperty('Result').data;
 });

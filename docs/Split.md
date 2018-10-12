@@ -22,7 +22,7 @@ component.getProperty('Split').data = 'in';
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Done').onEmit(function(){
+component.getPort('Done').onEmit(function() {
   // the result is an array of the seperated parts
   let result = component.getPort('Done').getProperty('Result').data;
 });

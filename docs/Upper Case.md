@@ -20,7 +20,7 @@ component.getProperty('Text').data = 'Going forth into the deep.';
 
 *Listen in for port emit events*
 ```javascript
-component.getPort('Done').onEmit(function(){
+component.getPort('Done').onEmit(function() {
   // the result is the converted upper case text
   let result = component.getPort('Done').getProperty('Result').data;
 });
