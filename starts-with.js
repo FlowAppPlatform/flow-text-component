@@ -2,7 +2,7 @@ const Flow = require('flow-platform-sdk');
 
 /*
  *
- * The component checks whether a string starts with another, returns boolean
+ * The component checks whether a string starts with another and emits the result
  *  
  */
 
@@ -16,35 +16,23 @@ class StartsWith extends Flow.Component {
     text.required = true;
     this.addProperty(text);
 
-    text = new Flow.Property('TextStartedWith', 'text');
+    text = new Flow.Property('StartsWith', 'text');
     text.required = true;
     this.addProperty(text);
 
-    const success = new Flow.Port('Success');
-    const error = new Flow.Port('Error');
+    this.addPort(new Flow.Port('StartsWith'));
+    this.addPort(new Flow.Port('DoesNotStartWith'));
 
-    let data = new Flow.Property('Data', 'boolean');
-    success.addProperty(data);
-
-    data = new Flow.Property('Data', 'text');
-    error.addProperty(data);
-
-    this.addPort(success);
-    this.addPort(error);
-
-    // we perform operation here
     this.attachTask(function() {
-      let port = this.getPort('Success');
-      try {
-        let textStartedWith = this.getProperty('TextStartedWith').data;
-        let text = this.getProperty('Text').data;
-        port.getProperty('Data').data = text.startsWith(textStartedWith);
-      } catch(err) {
-        port = this.getPort('Error');
-        port.getProperty('Data').data = 'Cannot check text started with in text';
-      }
+      
+      let textStartedWith = this.getProperty('StartsWith').data;
+      let text = this.getProperty('Text').data;
+      
+      let port = this.getPort(text.startsWith(textStartedWith) ? 'StartsWith' : 'DoesNotStartWith');
       port.emit();
+      
       this.taskComplete();
+
     });
 
   }

@@ -58,44 +58,14 @@
     },
     "ports": [
       {
-        "id": "Success",
-        "title": "Success",
-        "description": "Operation done succesfully.",
-        "properties": [
-          {
-            "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
-            "properties": [
-              {
-                "id": "Data",
-                "name": "Data",
-                "type": "boolean",
-                "data": null,
-                "options": { "required": true }
-              }
-            ]
-          }
-        ]
+        "id": "StartsWith",
+        "title": "Starts with",
+        "description": "The text starts with the other."
       },
       {
-        "id": "Error",
-        "title": "Error",
-        "description": "An error occured during the operation.",
-        "properties": [
-          {
-            "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
-            "properties": [
-              {
-                "id": "Data",
-                "name": "Error",
-                "type": "text",
-                "data": null,
-                "options": { "required": true }
-              }
-            ]
-          }
-        ]
+        "id": "DoesNotStartWith",
+        "title": "Does not start with",
+        "description": "The text does not start with the other."
       }
     ],
     "properties": [
@@ -111,8 +81,8 @@
             "options": { "required": true }
           },
           {
-            "id": "TextStartedWith",
-            "name": "Text started with",
+            "id": "StartsWith",
+            "name": "Text to check for",
             "type": "text",
             "data": null,
             "options": { "required": true }
