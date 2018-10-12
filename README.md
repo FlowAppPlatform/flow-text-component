@@ -22,22 +22,18 @@ const component = new Component.Contains();
 ```javascript
 // these are required for the Contains component
 component.getProperty('Text').data = 'Going forth into the deep.';
-component.getProperty('TextContained').data = 'for';
+component.getProperty('Contains').data = 'for';
 ```
 
 *Then listen in for port emit events*
 ```javascript
-component.getPort('Success').onEmit(function(){
-  // operation occured succesfully
-  // the result should be true for this case
-  let result = component.getPort('Success').getProperty('Data').data;
+component.getPort('Contains').onEmit(function() {
+  // the text contains the other
 });
 
-component.getPort('Error').onEmit(function(){
-  // an error occured
-  let err = component.getPort('Error').getProperty('Data').data;
+component.getPort('DoesNotContain').onEmit(function() {
+  // the text does not contain the other
 });
-
 
 // execute the component
 component.execute();
