@@ -41,4 +41,4 @@ component.execute();
 
 #### Conclusion
 
-This is a sample use of the Flow Text component. Check the [docs](./docs/) on how to use other components
+This is a sample use of the Flow Text component. Check the [docs](./../docs/) on how to use other components
