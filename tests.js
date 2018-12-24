@@ -1,6 +1,9 @@
 const assert = require('assert');
 const Component = require('./index');
 
+const Graph = require('flow-platform-sdk').Graph;
+const graph = new Graph("graph-1");
+
 describe(`Component Tests
 `, function() {
   it('Component should emit Contains', function(done) {
@@ -13,6 +16,7 @@ describe(`Component Tests
     component.getPort('DoesNotContain').onEmit(function() {
       done(new Error('Does not contain emitted'));
     });
+    graph.addComponent(component);
     component.execute();
   });
   it('Component should emit DoesNotEndWith', function(done) {
@@ -25,6 +29,7 @@ describe(`Component Tests
     component.getPort('DoesNotEndWith').onEmit(function() {
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it('Component should emit StartsWith', function(done) {
@@ -37,6 +42,7 @@ describe(`Component Tests
     component.getPort('DoesNotStartWith').onEmit(function() {
       done(new Error('Does not start with emitted'));
     });
+    graph.addComponent(component);
     component.execute();
   });
   it('Component should emit `we chat`', function(done) {
@@ -49,6 +55,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it('Component should emit `WE CHAT`', function(done) {
@@ -61,6 +68,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it(`Component should emit '["W","C"]'`, function(done) {
@@ -74,6 +82,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it(`Component should emit '3'`, function(done) {
@@ -87,6 +96,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it(`Component should emit 'We Lout'`, function(done) {
@@ -101,6 +111,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it(`Component should emit '["We","hat"]'`, function(done) {
@@ -114,6 +125,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
   it(`Component should emit ' Cha'`, function(done) {
@@ -128,6 +140,7 @@ describe(`Component Tests
       );
       done();
     });
+    graph.addComponent(component);
     component.execute();
   });
 });
