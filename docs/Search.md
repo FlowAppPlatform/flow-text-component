@@ -26,8 +26,14 @@ component.getPort('Done').onEmit(function() {
   // the result is an array of the matches
   let result = component.getPort('Done').getProperty('Result').data;
 });
+```
 
-// execute the component
+*Execute the component*
+```javascript
+// add the component to a graph before executing it
+const Graph = require('flow-platform-sdk').Graph;
+new Graph("graph-1").addComponent(component);
+
 component.execute();
 ```
 

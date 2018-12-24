@@ -29,8 +29,14 @@ component.getPort('Contains').onEmit(function() {
 component.getPort('DoesNotContain').onEmit(function() {
   // the text does not contain the other
 });
+```
 
-// execute the component
+*Execute the component*
+```javascript
+// add the component to a graph before executing it
+const Graph = require('flow-platform-sdk').Graph;
+new Graph("graph-1").addComponent(component);
+
 component.execute();
 ```
 
