@@ -29,8 +29,14 @@ component.getPort('EndsWith').onEmit(function() {
 component.getPort('DoesNotEndWith').onEmit(function() {
   // text does not end with the other
 });
+```
 
-// execute the component
+*Execute the component*
+```javascript
+// add the component to a graph before executing it
+const Graph = require('flow-platform-sdk').Graph;
+new Graph("graph-1").addComponent(component);
+
 component.execute();
 ```
 

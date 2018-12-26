@@ -1,10 +1,10 @@
 # Flow Text component
-A component for common operations on strings designed using Flow SDK. The component is available in the npm registry.
+A component for common operations on strings designed using Flow SDK.
 
-*To use the component, install the package in your NodeJS project*
+*To get started, install the package in your NodeJS project*
 
 ```
-npm install flow-text-component --save
+npm i flow-text-component --save
 ```
 
 *Use the component as below*
@@ -34,8 +34,14 @@ component.getPort('Contains').onEmit(function() {
 component.getPort('DoesNotContain').onEmit(function() {
   // the text does not contain the other
 });
+```
 
-// execute the component
+*Execute the component*
+```javascript
+// add the component to a graph before executing it
+const Graph = require('flow-platform-sdk').Graph;
+new Graph("graph-1").addComponent(component);
+
 component.execute();
 ```
 
