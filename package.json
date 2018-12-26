@@ -1,6 +1,5 @@
 {
   "name": "flow-text-component",
-  "version": "1.0.0",
   "description": "A component for common operations on strings designed using Flow SDK",
   "main": "index.js",
   "scripts": {
