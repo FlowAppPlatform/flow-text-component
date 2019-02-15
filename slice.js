@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class Slice extends Flow.Component {
-  constructor() {
-
-    super();
+  constructor(id =null) {
+    
+    super(id);
     this.name = 'Slice';
 
     let text = new Flow.Property('Text', 'text');

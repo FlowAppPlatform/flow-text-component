@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class Search extends Flow.Component {
-  constructor() {
+  constructor(id =null) {
     
-    super();
+    super(id);
     this.name = 'Search';
 
     let text = new Flow.Property('Text', 'text');

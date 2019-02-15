@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class StartsWith extends Flow.Component {
-  constructor() {
+  constructor(id =null) {
     
-    super();
+    super(id);
     this.name = 'Starts With';
 
     let text = new Flow.Property('Text', 'text');

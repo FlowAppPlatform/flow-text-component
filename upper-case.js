@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class ToUpperCase extends Flow.Component {
-  constructor() {
+  constructor(id =null) {
     
-    super();
+    super(id);
     this.name = 'To upper case';
 
     const text = new Flow.Property('Text', 'text');

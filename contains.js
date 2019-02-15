@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class Contains extends Flow.Component {
-  constructor() {
+  constructor(id =null) {
     
-    super();
+    super(id);
     this.name = 'Contains';
 
     let text = new Flow.Property('Text', 'text');

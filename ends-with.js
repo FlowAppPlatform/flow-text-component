@@ -7,9 +7,9 @@ const Flow = require('flow-platform-sdk');
  */
 
 class EndsWith extends Flow.Component {
-  constructor() {
+  constructor(id =null) {
     
-    super();
+    super(id);
     this.name = 'Ends With';
 
     let text = new Flow.Property('Text', 'text');

@@ -1,9 +1,10 @@
 {
   "flow-text-component-contains": {
-    "componentId": "flow-text-component-contains",
+    "graphComponentId": "flow-text-component-contains",
     "title": "Check if a string contains another",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Conditions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./contains.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -13,18 +14,18 @@
       {
         "id": "Contains",
         "title": "Contains",
-        "description": "Text contains the other."
+        "description": "Text contains the other"
       },
       {
         "id": "DoesNotContain",
         "title": "Does not contain",
-        "description": "Text does not contain the other."
+        "description": "Text does not contain the other"
       }
     ],
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -47,10 +48,11 @@
     "isDeletable": true
   },
   "flow-text-component-starts-with": {
-    "componentId": "flow-text-component-starts-with",
+    "graphComponentId": "flow-text-component-starts-with",
     "title": "Check if a string starts with another",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Conditions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./starts-with.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -60,18 +62,18 @@
       {
         "id": "StartsWith",
         "title": "Starts with",
-        "description": "Text starts with the other."
+        "description": "Text starts with the other"
       },
       {
         "id": "DoesNotStartWith",
         "title": "Does not start with",
-        "description": "Text does not start with the other."
+        "description": "Text does not start with the other"
       }
     ],
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -94,10 +96,11 @@
     "isDeletable": true
   },
   "flow-text-component-ends-with": {
-    "componentId": "flow-text-component-ends-with",
+    "graphComponentId": "flow-text-component-ends-with",
     "title": "Check if a string ends with another",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Conditions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./ends-with.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -107,18 +110,18 @@
       {
         "id": "EndsWith",
         "title": "Ends with",
-        "description": "Text ends with the other."
+        "description": "Text ends with the other"
       },
       {
         "id": "DoesNotEndWith",
         "title": "Does not end with",
-        "description": "Text does not end with the other."
+        "description": "Text does not end with the other"
       }
     ],
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -141,10 +144,11 @@
     "isDeletable": true
   },
   "flow-text-component-lower-case": {
-    "componentId": "flow-text-component-lower-case",
+    "graphComponentId": "flow-text-component-lower-case",
     "title": "Convert a string to lower case",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./lower-case.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -154,11 +158,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Text converted to lower case.",
+        "description": "Text converted to lower case",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -175,7 +179,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -191,10 +195,11 @@
     "isDeletable": true
   },
   "flow-text-component-upper-case": {
-    "componentId": "flow-text-component-upper-case",
+    "graphComponentId": "flow-text-component-upper-case",
     "title": "Convert a string to upper case",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./upper-case.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -204,11 +209,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Text converted to upper case.",
+        "description": "Text converted to upper case",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -225,7 +230,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -241,10 +246,11 @@
     "isDeletable": true
   },
   "flow-text-component-matches": {
-    "componentId": "flow-text-component-matches",
+    "graphComponentId": "flow-text-component-matches",
     "title": "Find matches to a regular expression in a string",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Conditions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./matches.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -254,11 +260,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Matches search complete.",
+        "description": "Matches search complete",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -275,7 +281,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -298,10 +304,11 @@
     "isDeletable": true
   },
   "flow-text-component-search": {
-    "componentId": "flow-text-component-search",
+    "graphComponentId": "flow-text-component-search",
     "title": "Search a string using a regular expression",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./search.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -311,11 +318,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Search completed.",
+        "description": "Search completed",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -332,7 +339,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -355,10 +362,11 @@
     "isDeletable": true
   },
   "flow-text-component-replace": {
-    "componentId": "flow-text-component-replace",
+    "graphComponentId": "flow-text-component-replace",
     "title": "Replace parts of a string that match a regular expression with another",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./replace.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -368,11 +376,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Replacement completed.",
+        "description": "Replacement completed",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -389,7 +397,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -419,10 +427,11 @@
     "isDeletable": true
   },
   "flow-text-component-split": {
-    "componentId": "flow-text-component-split",
+    "graphComponentId": "flow-text-component-split",
     "title": "Split a string into parts seperated by another",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./split.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -432,11 +441,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Split complete.",
+        "description": "Split complete",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -453,7 +462,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
@@ -476,10 +485,11 @@
     "isDeletable": true
   },
   "flow-text-component-slice": {
-    "componentId": "flow-text-component-slice",
+    "graphComponentId": "flow-text-component-slice",
     "title": "Retrieve a portion of a string between two indices",
-    "imgSrc": "assets/icons/text.svg",
-    "type": "flow-graph-component",
+    "category": "Actions",
+    "imgSrc": "assets/images/icons/text.svg",
+    "type": "graphComponent",
     "file": "./slice.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
@@ -489,11 +499,11 @@
       {
         "id": "Done",
         "title": "Done",
-        "description": "Slice complete.",
+        "description": "Slice complete",
         "properties": [
           {
             "categoryName": "General",
-            "categoryDescription": "Basic settings about this port.",
+            "categoryDescription": "Basic settings about this port",
             "properties": [
               {
                 "id": "Result",
@@ -510,7 +520,7 @@
     "properties": [
       {
         "categoryName": "General",
-        "categoryDescription": "Basic settings about the component.",
+        "categoryDescription": "Basic settings about the component",
         "properties": [
           {
             "id": "Text",
