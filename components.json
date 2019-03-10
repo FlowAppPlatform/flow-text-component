@@ -1,8 +1,8 @@
 {
   "flow-text-component-contains": {
     "graphComponentId": "flow-text-component-contains",
-    "title": "Check if a string contains another",
-    "category": "Conditions",
+    "title": "Check if text contains another",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./contains.js",
@@ -49,8 +49,8 @@
   },
   "flow-text-component-starts-with": {
     "graphComponentId": "flow-text-component-starts-with",
-    "title": "Check if a string starts with another",
-    "category": "Conditions",
+    "title": "Check if text starts with another",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./starts-with.js",
@@ -97,8 +97,8 @@
   },
   "flow-text-component-ends-with": {
     "graphComponentId": "flow-text-component-ends-with",
-    "title": "Check if a string ends with another",
-    "category": "Conditions",
+    "title": "Check if text ends with another",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./ends-with.js",
@@ -145,8 +145,8 @@
   },
   "flow-text-component-lower-case": {
     "graphComponentId": "flow-text-component-lower-case",
-    "title": "Convert a string to lower case",
-    "category": "Actions",
+    "title": "Text to lower case",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./lower-case.js",
@@ -196,8 +196,8 @@
   },
   "flow-text-component-upper-case": {
     "graphComponentId": "flow-text-component-upper-case",
-    "title": "Convert a string to upper case",
-    "category": "Actions",
+    "title": "Text to upper case",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./upper-case.js",
@@ -247,8 +247,8 @@
   },
   "flow-text-component-matches": {
     "graphComponentId": "flow-text-component-matches",
-    "title": "Find matches to a regular expression in a string",
-    "category": "Conditions",
+    "title": "Matches to regular expression in text",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./matches.js",
@@ -305,8 +305,8 @@
   },
   "flow-text-component-search": {
     "graphComponentId": "flow-text-component-search",
-    "title": "Search a string using a regular expression",
-    "category": "Actions",
+    "title": "Search text",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./search.js",
@@ -363,8 +363,8 @@
   },
   "flow-text-component-replace": {
     "graphComponentId": "flow-text-component-replace",
-    "title": "Replace parts of a string that match a regular expression with another",
-    "category": "Actions",
+    "title": "Replace parts of text",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./replace.js",
@@ -384,7 +384,7 @@
             "properties": [
               {
                 "id": "Result",
-                "name": "New string with replacements",
+                "name": "New text with replacements",
                 "type": "text",
                 "data": null,
                 "options": { "required": true }
@@ -428,8 +428,8 @@
   },
   "flow-text-component-split": {
     "graphComponentId": "flow-text-component-split",
-    "title": "Split a string into parts seperated by another",
-    "category": "Actions",
+    "title": "Split text",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./split.js",
@@ -449,7 +449,7 @@
             "properties": [
               {
                 "id": "Result",
-                "name": "Seperated parts of the string",
+                "name": "Seperated parts of the text",
                 "type": "list",
                 "data": null,
                 "options": { "required": true }
@@ -486,8 +486,8 @@
   },
   "flow-text-component-slice": {
     "graphComponentId": "flow-text-component-slice",
-    "title": "Retrieve a portion of a string between two indices",
-    "category": "Actions",
+    "title": "Retrieve portion of text",
+    "category": "Text",
     "imgSrc": "assets/images/icons/text.svg",
     "type": "graphComponent",
     "file": "./slice.js",
@@ -507,7 +507,7 @@
             "properties": [
               {
                 "id": "Result",
-                "name": "Portion of the string retrieved",
+                "name": "Portion of the text retrieved",
                 "type": "text",
                 "data": null,
                 "options": { "required": true }
