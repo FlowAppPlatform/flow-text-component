@@ -14,12 +14,14 @@
       {
         "id": "Contains",
         "title": "Contains",
-        "description": "Text contains the other"
+        "description": "Text contains the other",
+        "color": "#427BF4"
       },
       {
         "id": "DoesNotContain",
         "title": "Does not contain",
-        "description": "Text does not contain the other"
+        "description": "Text does not contain the other",
+        "color": "#F4CE42"
       }
     ],
     "properties": [
@@ -62,12 +64,14 @@
       {
         "id": "StartsWith",
         "title": "Starts with",
-        "description": "Text starts with the other"
+        "description": "Text starts with the other",
+        "color": "#427BF4"
       },
       {
         "id": "DoesNotStartWith",
         "title": "Does not start with",
-        "description": "Text does not start with the other"
+        "description": "Text does not start with the other",
+        "color": "#F4CE42"
       }
     ],
     "properties": [
@@ -110,12 +114,14 @@
       {
         "id": "EndsWith",
         "title": "Ends with",
-        "description": "Text ends with the other"
+        "description": "Text ends with the other",
+        "color": "#427BF4"
       },
       {
         "id": "DoesNotEndWith",
         "title": "Does not end with",
-        "description": "Text does not end with the other"
+        "description": "Text does not end with the other",
+        "color": "#F4CE42"
       }
     ],
     "properties": [
@@ -159,6 +165,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Text converted to lower case",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -210,6 +217,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Text converted to upper case",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -261,6 +269,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Matches search complete",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -319,6 +328,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Search completed",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -377,6 +387,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Replacement completed",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -442,6 +453,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Split complete",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -500,6 +512,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Slice complete",
+        "color": "#3BC105",
         "properties": [
           {
             "categoryName": "General",
@@ -549,5 +562,4 @@
     "showOnComponentsPanel": true,
     "isDeletable": true
   }
-
 }
