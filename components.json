@@ -5,7 +5,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-contains.svg",
     "type": "graphComponent",
-    "file": "./contains.js",
+    "file": "./src/contains.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -15,7 +15,7 @@
         "id": "Contains",
         "title": "Contains",
         "description": "Text contains the other",
-        "color": "#427BF4"
+        "color": "#7ab260"
       },
       {
         "id": "DoesNotContain",
@@ -55,7 +55,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-starts-with.svg",
     "type": "graphComponent",
-    "file": "./starts-with.js",
+    "file": "./src/starts-with.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -65,7 +65,7 @@
         "id": "StartsWith",
         "title": "Starts with",
         "description": "Text starts with the other",
-        "color": "#427BF4"
+        "color": "#7ab260"
       },
       {
         "id": "DoesNotStartWith",
@@ -105,7 +105,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-ends-with.svg",
     "type": "graphComponent",
-    "file": "./ends-with.js",
+    "file": "./src/ends-with.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -115,7 +115,7 @@
         "id": "EndsWith",
         "title": "Ends with",
         "description": "Text ends with the other",
-        "color": "#427BF4"
+        "color": "#7ab260"
       },
       {
         "id": "DoesNotEndWith",
@@ -155,7 +155,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-lower-case.svg",
     "type": "graphComponent",
-    "file": "./lower-case.js",
+    "file": "./src/lower-case.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -165,7 +165,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Text converted to lower case",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -207,7 +207,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-upper-case.svg",
     "type": "graphComponent",
-    "file": "./upper-case.js",
+    "file": "./src/upper-case.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -217,7 +217,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Text converted to upper case",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -259,7 +259,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-matches.svg",
     "type": "graphComponent",
-    "file": "./matches.js",
+    "file": "./src/matches.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -269,7 +269,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Matches search complete",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -318,7 +318,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-search.svg",
     "type": "graphComponent",
-    "file": "./search.js",
+    "file": "./src/search.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -328,7 +328,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Search completed",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -377,7 +377,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-replace.svg",
     "type": "graphComponent",
-    "file": "./replace.js",
+    "file": "./src/replace.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -387,7 +387,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Replacement completed",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -443,7 +443,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-split.svg",
     "type": "graphComponent",
-    "file": "./split.js",
+    "file": "./src/split.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -453,7 +453,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Split complete",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
@@ -502,7 +502,7 @@
     "category": "Text",
     "imgSrc": "assets/images/icons/text-slice.svg",
     "type": "graphComponent",
-    "file": "./slice.js",
+    "file": "./src/slice.js",
     "executionPlatform": ["server", "client"],
     "metadata": {
       "icon-color": "#7ab260"
@@ -512,7 +512,7 @@
         "id": "Done",
         "title": "Done",
         "description": "Slice complete",
-        "color": "#3BC105",
+        "color": "#7ab260",
         "properties": [
           {
             "categoryName": "General",
